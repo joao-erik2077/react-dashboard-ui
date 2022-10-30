@@ -1,5 +1,7 @@
+$navbar: #5B5750;
+
 .DashboardNavbar {
     width: 100%;
     height: 10%;
-    background-color: purple;
+    background-color: $navbar;
 }

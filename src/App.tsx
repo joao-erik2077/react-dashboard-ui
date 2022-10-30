@@ -1,9 +1,9 @@
 import React from 'react';
 import './App.scss';
 
-import Dashboard from './components/Dashboard';
-import DashboardSidebar from './components/DashboardSidebar';
-import DashboardNavbar from './components/DashboardNavbar';
+import Dashboard from './components/Dashboard/Dashboard';
+import DashboardSidebar from './components/DashboardSidebar/DashboardSidebar';
+import DashboardNavbar from './components/DashboardNavbar/DashboardNavbar';
 
 function App() {
   return (
