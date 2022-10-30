@@ -1,11 +1,11 @@
 import React from 'react';
 import './App.scss';
 
-function App() {
+function Sidebar() {
   return (
-    <div className="App">
+    <div className="Sidebar">
     </div>
   );
 }
 
-export default App;
+export default Sidebar;
