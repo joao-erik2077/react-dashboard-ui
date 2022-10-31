@@ -11,7 +11,7 @@ function App() {
       <div className="col-3">
         <DashboardSidebar />
       </div>
-      <div className="col-9">
+      <div className="col">
         <DashboardNavbar />
         <Dashboard />
       </div>

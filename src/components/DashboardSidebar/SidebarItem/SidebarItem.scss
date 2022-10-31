@@ -1,0 +1,25 @@
+.SidebarItem {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 5%;
+
+    cursor: pointer;
+
+    font-size: 2rem;
+    transition: 0.3s;
+
+    .Icon {
+        margin-right: 5%;
+    }
+
+    p {
+        margin: 0;
+        display: flex;
+        align-items: center;
+    }
+
+    &:hover {
+        color: #c1c1c1;
+    }
+}

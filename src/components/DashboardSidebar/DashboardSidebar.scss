@@ -1,7 +1,37 @@
 $sidebar: #444140;
 
 .DashboardSidebar {
+    $boxshadow: 10px;
+
     background-color: $sidebar;
     width: 100%;
-    height: 100%;
+    height: 100vh;
+    box-shadow: 0 0 $boxshadow black;
+    clip-path: inset(0px $boxshadow*-1 0px 0px);
+
+    display: flex;
+    flex-direction: column;
+
+    color: #f1f1f1;
+}
+
+.SidebarNavbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 2rem;
+
+    .SidebarNavbarTitle {
+        display: flex;
+        align-items: flex-end;
+    }
+
+    .SidebarNavbarIcon {
+        cursor: pointer;
+        transition: 0.3s;
+
+        &:hover {
+            color: #c1c1c1;
+        }
+    }
 }
