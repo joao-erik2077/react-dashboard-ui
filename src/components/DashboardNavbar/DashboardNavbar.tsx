@@ -2,11 +2,11 @@ import React from 'react';
 import './DashboardNavbar.scss';
 
 function DashboardNavbar() {
-  return (
-    <div className="DashboardNavbar">
+    return (
+        <div className="DashboardNavbar">
 
-    </div>
-  );
+        </div>
+    );
 }
 
 export default DashboardNavbar;
