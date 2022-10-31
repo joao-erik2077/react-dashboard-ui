@@ -10,11 +10,16 @@ function DashboardSidebar() {
         <div className='DashboardSidebar'>
             <div className='SidebarNavbar'>
                 <span className='SidebarNavbarTitle'>SIDEMENU</span>
-                <span className='SidebarNavbarIcon'><BsFillCaretLeftFill /></span>
+                <span className='SidebarNavbarIcon' onClick={dismiss}><BsFillCaretLeftFill /></span>
             </div>
             <SidebarItemList />
         </div>
     );
+}
+
+function dismiss() {
+    const sidebar = document.querySelector('.sidebar');
+    sidebar?.classList.add('close');
 }
 
 export default DashboardSidebar;

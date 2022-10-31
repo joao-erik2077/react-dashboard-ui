@@ -20,15 +20,19 @@ $sidebar: #444140;
     justify-content: space-between;
     align-items: center;
     font-size: 2rem;
+    margin-top: 0.3rem;
 
     .SidebarNavbarTitle {
-        display: flex;
-        align-items: flex-end;
+        flex-grow: 1;
+        text-align: center;
     }
 
     .SidebarNavbarIcon {
+        display: flex;
+        align-items: flex-start;
         cursor: pointer;
         transition: 0.3s;
+        width: 10%;
 
         &:hover {
             color: #c1c1c1;

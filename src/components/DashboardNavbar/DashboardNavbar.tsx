@@ -4,7 +4,7 @@ import './DashboardNavbar.scss';
 function DashboardNavbar() {
     return (
         <div className="DashboardNavbar">
-
+            <h1 className="NavbarTitle">NAVBAR</h1>
         </div>
     );
 }
