@@ -3,9 +3,10 @@ import './SidebarItemList.scss';
 
 import SidebarItem from '../SidebarItem/SidebarItem';
 
-import { BsFillBarChartFill } from 'react-icons/bs';
-import { BsFillBookmarkFill } from 'react-icons/bs';
-import { BsFillCalendarEventFill } from 'react-icons/bs';
+import { BiBarChartAlt } from 'react-icons/bi';
+import { BiBookBookmark } from 'react-icons/bi';
+import { BiCalendarEvent } from 'react-icons/bi';
+import { BiCart } from 'react-icons/bi';
 
 function SidebarItemList() {
     return (
@@ -17,19 +18,20 @@ function SidebarItemList() {
 
 const data = [
     {
-        name: 'Name 1',
-        icon: <BsFillBarChartFill />,
+        name: 'Ações',
+        icon: <BiBarChartAlt />,
     },
     {
-        name: 'Name 2',
+        name: 'Compras',
+        icon: <BiCart />,
     },
     {
-        name: 'Name 3',
-        icon: <BsFillBookmarkFill />,
+        name: 'To-do',
+        icon: <BiBookBookmark />,
     },
     {
-        name: 'Name 4',
-        icon: <BsFillCalendarEventFill />,
+        name: 'Dias',
+        icon: <BiCalendarEvent />,
     }
 ];
 

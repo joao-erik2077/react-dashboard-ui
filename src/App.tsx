@@ -8,7 +8,7 @@ import DashboardNavbar from './components/DashboardNavbar/DashboardNavbar';
 function App() {
     return (
         <div className="App row">
-            <div className="col-3 sidebar">
+            <div className="col-2 sidebar">
                 <DashboardSidebar />
             </div>
             <div className="col">
