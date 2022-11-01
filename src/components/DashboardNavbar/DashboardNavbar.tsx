@@ -3,11 +3,12 @@ import './DashboardNavbar.scss';
 
 import { BsFillCaretRightFill } from 'react-icons/bs';
 
-function DashboardNavbar() {
+function DashboardNavbar(props: any) {
+    const title = props.title || 'a';
     return (
         <div className="DashboardNavbar">
             <BsFillCaretRightFill className='OpenSidemenu' onClick={openSidemenu} />
-            <h1 className="NavbarTitle">NAVBAR</h1>
+            <h1 className="NavbarTitle">{title}</h1>
         </div>
     );
 }

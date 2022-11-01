@@ -1,0 +1,49 @@
+.DocumentItem {
+    width: 8rem;
+    height: 8rem;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    cursor: pointer;
+    transition: 0.3s;
+    box-shadow: 0 0 0.1rem #000000;
+    margin-right: 0.5rem;
+
+    background-color: #444140;
+    color: #f1f1f1;
+    &:hover {
+        background-color: #3b3938;
+        color: #ebebeb;
+    }
+
+
+    .DocumentItemIcon {
+        height: 60%;
+
+        svg {
+            width: 100%;
+            height: 100%;
+
+            path+path {
+                stroke: #444140;
+
+                &:hover {
+                    stroke: #3b3938;
+                }
+            }
+        }
+    }
+
+    .DocumentItemName {
+        flex-grow: 1;
+        h1 {
+            text-align: center;
+            font-size: 1.2rem;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            word-wrap: break-word;
+        }
+    }
+
+}
+

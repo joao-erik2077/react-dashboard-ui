@@ -18,25 +18,21 @@ class App extends React.Component<any, any> {
 
     constructor(props: any) {
         super(props);
-        this.state = {dashboard: dashboards['Document']};
+        this.state = {dashboard: dashboards['Document'], currentDashboard: 'Document'};
     }
 
     render() {
         return (
             <div className="App row">
                 <div className="col-2 sidebar">
-                    <DashboardSidebar setDashboard={(key: string) => this.setState({dashboard: dashboards[key]})} />
+                    <DashboardSidebar setDashboard={(key: string) => this.setState({dashboard: dashboards[key], currentDashboard: key})} />
                 </div>
                 <div className="col">
-                    <DashboardNavbar />
+                    <DashboardNavbar title={this.state.currentDashboard} />
                     <Dashboard dashboard={this.state.dashboard} />
                 </div>
             </div>
         );
-    }
-
-    setDashboard(key: string) {
-        this.setState({dashboard: dashboards[key]});
     }
 }
 

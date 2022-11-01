@@ -1,0 +1,26 @@
+.Section {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 1rem;
+    max-width: min-content;
+
+    .DocumentSectionTitle {
+        color: #444140;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+
+    .Divider {
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+
+        div {
+            width: 97.5%;
+            border-bottom: 3px solid #444140;
+            border-radius: 3rem;
+        }
+    }
+}
