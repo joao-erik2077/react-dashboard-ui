@@ -5,18 +5,50 @@ import Dashboard from './components/Dashboard/Dashboard';
 import DashboardSidebar from './components/DashboardSidebar/DashboardSidebar';
 import DashboardNavbar from './components/DashboardNavbar/DashboardNavbar';
 
-function App() {
-    return (
-        <div className="App row">
-            <div className="col-2 sidebar">
-                <DashboardSidebar />
+import Document from './components/Dashboard/Document/Document';
+import Contact from './components/Dashboard/Contact/Contact';
+import Workflow from './components/Dashboard/Workflow/Workflow';
+import ChatIntegration from './components/Dashboard/ChatIntegration/ChatIntegration';
+import MarketingAutomation from './components/Dashboard/MarketingAutomation/MarketingAutomation';
+import EmailIntegration from './components/Dashboard/EmailIntegration/EmailIntegration';
+import Transaction from './components/Dashboard/Transaction/Transaction';
+import Maintenance from './components/Dashboard/Maintenance/Maintenance';
+
+class App extends React.Component<any, any> {
+
+    constructor(props: any) {
+        super(props);
+        this.state = {dashboard: dashboards['Document']};
+    }
+
+    render() {
+        return (
+            <div className="App row">
+                <div className="col-2 sidebar">
+                    <DashboardSidebar setDashboard={(key: string) => this.setState({dashboard: dashboards[key]})} />
+                </div>
+                <div className="col">
+                    <DashboardNavbar />
+                    <Dashboard dashboard={this.state.dashboard} />
+                </div>
             </div>
-            <div className="col">
-                <DashboardNavbar />
-                <Dashboard />
-            </div>
-        </div>
-    );
+        );
+    }
+
+    setDashboard(key: string) {
+        this.setState({dashboard: dashboards[key]});
+    }
 }
+
+const dashboards: any = {
+    'Document': <Document />,
+    'Contact': <Contact />,
+    'Workflow': <Workflow />,
+    'Chat Integration': <ChatIntegration />,
+    'Marketing Automation': <MarketingAutomation />,
+    'Email Integration': <EmailIntegration />,
+    'Transaction': <Transaction />,
+    'Maintenance': <Maintenance />,
+};
 
 export default App;

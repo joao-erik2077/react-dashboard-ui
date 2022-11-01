@@ -1,26 +1,24 @@
 import React from 'react';
 import './SidebarItem.scss';
 
-function SidebarItem(props: any) {
-    if (props.icon) {
+class SidebarItem extends React.Component<any, any> {
+
+    constructor(props: any) {
+        super(props);
+    }
+
+    render() {
         return (
-            <div className='SidebarItem'>
+            <div className='SidebarItem' onClick={() => this.props.setDashboard(this.props.name)}>
                 <div className="Icon">
-                    {props.icon}
+                    {this.props.icon}
                 </div>
                 <p>
-                    {props.name}
+                    {this.props.name}
                 </p>
             </div>
         );
-    } else {
-        return (
-            <div className='SidebarItem'>
-                {props.name}
-            </div>
-        );
     }
-
 }
 
 export default SidebarItem;

@@ -5,25 +5,32 @@ import SidebarItemList from './SidebarItemList/SidebarItemList';
 
 import { BsFillCaretLeftFill } from 'react-icons/bs';
 
-function DashboardSidebar() {
-    return (
-        <div className='DashboardSidebar'>
-            <div className="SidebarSection">
-                <div className='SidebarNavbar'>
-                    <span className='SidebarNavbarTitle'>SIDEMENU</span>
-                    <span className='SidebarNavbarIcon' onClick={dismiss}><BsFillCaretLeftFill /></span>
-                </div>
-                <div className="Divider"></div>
-            </div>
-            <SidebarItemList />
-        </div>
-    );
-}
+class DashboardSidebar extends React.Component<any, any> {
 
-function dismiss() {
-    const sidebar = document.querySelector('.sidebar');
-    sidebar?.classList.remove('open');
-    sidebar?.classList.add('close');
+    constructor(props: any) {
+        super(props);
+    }
+
+    render() {
+        return (
+            <div className='DashboardSidebar'>
+                <div className="SidebarSection">
+                    <div className='SidebarNavbar'>
+                        <span className='SidebarNavbarTitle'>SIDEMENU</span>
+                        <span className='SidebarNavbarIcon' onClick={this.dismiss}><BsFillCaretLeftFill /></span>
+                    </div>
+                    <div className="Divider"></div>
+                </div>
+                <SidebarItemList setDashboard={this.props.setDashboard} />
+            </div>
+        );
+    }
+
+    dismiss() {
+        const sidebar = document.querySelector('.sidebar');
+        sidebar?.classList.remove('open');
+        sidebar?.classList.add('close');
+    }
 }
 
 export default DashboardSidebar;

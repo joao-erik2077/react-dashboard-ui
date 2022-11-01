@@ -1,10 +1,10 @@
 import React from 'react';
 import './Dashboard.scss';
 
-function Dashboard() {
+function Dashboard(props: any) {
     return (
         <div className="Dashboard">
-
+            {props.dashboard}
         </div>
     );
 }

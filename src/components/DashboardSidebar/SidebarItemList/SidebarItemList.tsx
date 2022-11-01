@@ -14,30 +14,42 @@ import {
     BiCog
 } from 'react-icons/bi';
 
-function SidebarItemList() {
-    return (
-        <div className='SidebarItemList'>
+class SidebarItemList extends React.Component<any, any> {
 
-            <div className="SidebarListSection">
-                <h1 className='SidebarListTitle'>Management</h1>
-                {getItems(managementItemsData)}
-                <div className='Divider'></div>
+    constructor(props: any) {
+        super(props);
+    }
 
-                <h1 className='SidebarListTitle'>Connection</h1>
-                {getItems(connectionItemsData)}
-                <div className='Divider'></div>
-
-                <h1 className='SidebarListTitle'>Customer</h1>
-                {getItems(customerItemsData)}
+    render() {
+        return (
+            <div className='SidebarItemList'>
+    
+                <div className="SidebarListSection">
+                    <h1 className='SidebarListTitle'>Management</h1>
+                    {this.getItems(managementItemsData)}
+                    <div className='Divider'></div>
+    
+                    <h1 className='SidebarListTitle'>Connection</h1>
+                    {this.getItems(connectionItemsData)}
+                    <div className='Divider'></div>
+    
+                    <h1 className='SidebarListTitle'>Customer</h1>
+                    {this.getItems(customerItemsData)}
+                </div>
+    
             </div>
+        );
+    }
 
-        </div>
-    );
-}
-
-function getItems(data: any[]) {
-    return data.map((value, index) => <SidebarItem name={value.name} icon={value.icon} key={index} />);
-}
+    getItems(data: any[]) {
+        return data.map((value, index) => <SidebarItem 
+            name={value.name}
+            icon={value.icon} 
+            key={index} 
+            setDashboard={this.props.setDashboard} 
+        />);
+    }
+} 
 
 const managementItemsData = [
     {
