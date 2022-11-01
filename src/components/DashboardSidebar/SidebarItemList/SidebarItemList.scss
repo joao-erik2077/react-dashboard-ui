@@ -1,5 +1,30 @@
+$align_margin: 10%;
+
 .SidebarItemList {
     height: inherit;
     flex-grow: 1;
     overflow-y: auto;
+    .SidebarListSection {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-left: $align_margin;
+
+        .SidebarListTitle {
+            font-size: 1.5rem;
+            text-align: start;
+            width: 100%;
+            color: #a8a8a8;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+    
+        .Divider {
+            border-bottom: 3px solid #ffffff;
+            width: 90%;
+            border-radius: 3rem;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+            margin-right: $align_margin;
+        }
+    }
 }

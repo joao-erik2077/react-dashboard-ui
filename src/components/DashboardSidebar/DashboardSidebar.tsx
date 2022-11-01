@@ -8,9 +8,12 @@ import { BsFillCaretLeftFill } from 'react-icons/bs';
 function DashboardSidebar() {
     return (
         <div className='DashboardSidebar'>
-            <div className='SidebarNavbar'>
-                <span className='SidebarNavbarTitle'>SIDEMENU</span>
-                <span className='SidebarNavbarIcon' onClick={dismiss}><BsFillCaretLeftFill /></span>
+            <div className="SidebarSection">
+                <div className='SidebarNavbar'>
+                    <span className='SidebarNavbarTitle'>SIDEMENU</span>
+                    <span className='SidebarNavbarIcon' onClick={dismiss}><BsFillCaretLeftFill /></span>
+                </div>
+                <div className="Divider"></div>
             </div>
             <SidebarItemList />
         </div>
