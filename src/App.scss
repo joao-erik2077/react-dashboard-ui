@@ -3,6 +3,8 @@
     width: 100vw;
     margin: 0;
     padding: 0;
+    display: flex;
+    flex-wrap: nowrap;
 
     * {
         padding: 0;
@@ -13,6 +15,10 @@
 .sidebar {
     white-space: nowrap;
     overflow: hidden;
+}
+
+.col {
+    min-width: min-content;
 }
 
 .close {

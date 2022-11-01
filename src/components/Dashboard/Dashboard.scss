@@ -1,7 +1,7 @@
 $dashboard: #f1f1f1;
 
 .Dashboard {
-    width: 100%;
+    min-width: min-content;
     height: 90%;
     background-color: $dashboard;
 }

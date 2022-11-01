@@ -5,13 +5,16 @@ $navbar: #f2f2f2;
     box-shadow: 0 0 $boxshadow rgba(0, 0, 0, 0.2);
     clip-path: inset(0px 0px $boxshadow*-1 0px);
 
-    width: 100%;
+    min-width: fit-content;
     height: 10%;
     background-color: $navbar;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .NavbarTitle {
-    text-align: center;
     color: #4e4e4e;
     font-size: 3rem;
     font-weight: bold;
@@ -22,7 +25,7 @@ $navbar: #f2f2f2;
     position: fixed;
     left: 0.5vw;
     top: 2vh;
-    font-size: 4rem;
+    font-size: 3rem;
     color: #312f2f;
     cursor: pointer;
 }
