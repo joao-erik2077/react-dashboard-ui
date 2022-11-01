@@ -4,6 +4,7 @@ $align_margin: 10%;
     height: inherit;
     flex-grow: 1;
     overflow-y: auto;
+    overflow-x: hidden;
     .SidebarListSection {
         display: flex;
         flex-direction: column;

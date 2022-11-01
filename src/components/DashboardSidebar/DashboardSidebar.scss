@@ -34,7 +34,7 @@ $sidebar: #444140;
     justify-content: space-between;
     align-items: center;
     font-size: 2rem;
-    margin-top: 0.3rem;
+    margin-top: 1.5rem;
     width: 100%;
 
     .SidebarNavbarTitle {
@@ -47,7 +47,8 @@ $sidebar: #444140;
         align-items: flex-start;
         cursor: pointer;
         transition: 0.3s;
-        width: 10%;
+        width: 20%;
+        font-size: 4rem;
 
         &:hover {
             color: #c1c1c1;

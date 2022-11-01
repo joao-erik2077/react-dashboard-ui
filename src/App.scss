@@ -10,16 +10,35 @@
     }
 }
 
-.close {
-    animation: close 0.5s normal forwards ease-in-out;
+.sidebar {
     white-space: nowrap;
     overflow: hidden;
 }
 
-@keyframes close {
+.close {
+    animation: closeSidemenu 0.5s normal forwards ease-in-out;
+}
+
+.open {
+    animation: openSidemenu 0.5s normal forwards ease-in-out;
+}
+
+@keyframes closeSidemenu {
     from {
         width: 16.7%;
-    } to {
+    }
+
+    to {
         width: 0;
+    }
+}
+
+@keyframes openSidemenu {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 16.7%;
     }
 }

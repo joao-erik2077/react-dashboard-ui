@@ -22,6 +22,7 @@ function DashboardSidebar() {
 
 function dismiss() {
     const sidebar = document.querySelector('.sidebar');
+    sidebar?.classList.remove('open');
     sidebar?.classList.add('close');
 }
 
